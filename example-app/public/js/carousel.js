@@ -1,50 +1,77 @@
 //import './bootstrap';
 
-let _image = [];
-let div1 = document.getElementById(image1)
-let div2 = document.getElementById(image2)
-let div3 = document.getElementById(image3)
-let div4 = document.getElementById(image4)
+class ImageCarousel{
+    imageObject = Array(Image);
 
-_image.push(div1);
-_image.push(div2);
-_image.push(div3);
-_image.push(div4);
+    constructor(linkImage, text){
+        this.linkImage = linkImage;
+        this.text = text;
+    }
 
-function moveLeft()
-{
-    let lastImage = _image[0];
+    turnLeft(){
+        let lastDiv = this.imageObject[0];
 
-    for (let i = 0; i < _image.length; i++) 
-   {
-       if(i < _image.length - 1)
-       {
-            _image[i] = _image[i + 1];
-       }
-       else
-       {
-            _image[i] = lastImage;
-       }
-   }
+        for(let i = 0; i < this.imageObject.length; i++){
+            if(i < this.imageObject.length - 1){
+                this.imageObject[i] = this.imageObject[i + 1];
+            }
+            else{
+                this.imageObject[i] = lastDiv;
+            }
+        }
 
-   
+        div1.children[0].src = this.imageObject[0].linkImage;
+        div1.children[1].innerHTML = this.imageObject[0].text;
+        div2.children[0].src = this.imageObject[1].linkImage;
+        div2.children[1].innerHTML = this.imageObject[1].text;
+        div3.children[0].src = this.imageObject[2].linkImage;
+        div3.children[1].innerHTML = this.imageObject[2].text;
+    }
+
+    turnRight(){
+        let lastDiv = this.imageObject[this.imageObject.length - 1];
+
+        for(let i = this.imageObject.length - 1; i >= 0; i--){
+            if(i > 0){
+                this.imageObject[i] = this.imageObject[i - 1];
+            }
+            else{
+                this.imageObject[i] = lastDiv;
+            }
+        }
+
+        div1.children[0].src = this.imageObject[0].linkImage;
+        div1.children[1].innerHTML = this.imageObject[0].text;
+        div2.children[0].src = this.imageObject[1].linkImage;
+        div2.children[1].innerHTML = this.imageObject[1].text;
+        div3.children[0].src = this.imageObject[2].linkImage;
+        div3.children[1].innerHTML = this.imageObject[2].text;
+    }
 }
 
-function moveRight()
-{
-   // Set a variable to have the book which will move to the other side of the array
-   let lastImage = _image[_image.length - 1];
+let images = new ImageCarousel("","");
+let image1 = new ImageCarousel("image/img_chania.jpg", "à l'aide 1");
+let image2 = new ImageCarousel("image/img_chania2.jpg", "à l'aide 2");
+let image3 = new ImageCarousel("image/img_flower.jpg", "à l'aide 3");
+let image4 = new ImageCarousel("image/img_flower2.jpg", "à l'aide 4");
 
-   // Exchange the places of the table by 1 to the right
-   for (let i = _image.length - 1; i >= 0; i--) 
-   {
-       if (i > 0) 
-       {
-        _image[i] = _image[i - 1];
-       }
-       else
-       {
-        _image[i] = lastImage;
-       }
-   }
-}
+let div1 = document.getElementById("carouselImage1");
+let div2 = document.getElementById("carouselImage2");
+let div3 = document.getElementById("carouselImage3");
+
+images.imageObject.push(image1);
+images.imageObject.push(image2);
+images.imageObject.push(image3);
+images.imageObject.push(image4);
+
+images.imageObject.shift();
+
+let leftBtn = document.getElementById("leftBtn");
+leftBtn.addEventListener("click", function(){
+    images.turnLeft();
+});
+
+let rightBtn = document.getElementById("rightBtn");
+rightBtn.addEventListener("click", function(){
+    images.turnRight();
+});

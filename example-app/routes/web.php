@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Test;
+use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +20,12 @@ Route::get('/home', function () {
 })->name("home");
 
 Route::get('/', function () {
-    return view('welcome');
-})->name("welcome");
+    return view('home');
+})->name("home");
+
+Route::get('/insctiption', function () {
+    return view('inscription');
+})->name("insctiption");
+
+
+Route::post('/adduser', [userController::class, 'addUser']);

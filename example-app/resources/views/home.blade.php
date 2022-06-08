@@ -1,3 +1,13 @@
+<?php
+
+use function PHPUnit\Framework\isEmpty;
+
+session_start();
+if (isEmpty($_SESSION['isConnected'])) {
+    $_SESSION['isConnected'] = false;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -19,35 +29,34 @@
 </head>
 
 <body>
+    <div>
+        @include('include.header')
+    </div>
     <!-- slider container -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
+    <div class="duration-75 dark:bg-gray-700">
+        <div class="flex">
+        <input id="leftBtn" type="button" value="Left">
             <!-- slide 1 -->
-            <div id="image1" class="carousel-item active">
-                <img src="{{ asset('image/img_chania.jpg') }}" alt="" />
-                <a href="{{ route('home') }}">s</a>
+            <div id="carouselImage1" class="flex-initial w-[200px] h-[200px]">
+                <img src="{{ asset('image/img_chania.jpg') }}" alt="Image monstre" />
+                <a href="">à l'aide 1</a>
             </div>
 
             <!-- slide 2 -->
-            <div id="image2" class="carousel-item">
-                <img src="{{ asset('image/img_chania2.jpg') }}" alt="" />
+            <div id="carouselImage2" class="flex-initial w-[200px] h-[200px]">
+                <img src="{{ asset('image/img_chania2.jpg') }}" alt="Image arme" />
+                <a href="">à l'aide 2</a>
             </div>
 
             <!-- slide 3 -->
-            <div id="image3" class="carousel-item">
-                <img src="{{ asset('image/img_flower.jpg') }}" alt="" />
+            <div id="carouselImage3" class="flex-initial w-[200px] h-[200px]">
+                <img src="{{ asset('image/img_flower.jpg') }}" alt="Image " />
+                <a href="">à l'aide 3</a>
             </div>
-
-            <!-- slide 4 -->
-            <div id="image4" class="carousel-item">
-                <img src="{{ asset('image/img_flower2.jpg') }}" alt="" />
-            </div>
-
-            <!-- Control buttons -->
-            <button onclick="moveLeft()" class="btn btn-next">left</button>
-            <button onclick="moveRight()" class="btn btn-prev">right</button>
+        <!-- Control buttons -->
+        <input id="rightBtn" type="button" value="Right">
         </div>
     </div>
 </body>
-<script src="{{ asset('/js/carousel.js') }}"></script>
+<script src="{{ asset('js/carousel.js') }}"></script>
 </html>
