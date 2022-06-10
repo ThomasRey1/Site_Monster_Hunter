@@ -6,6 +6,9 @@ use App\Models\user;
     tailwind.config = {
         theme: {
             extend: {
+                transitionProperty:{
+                    
+                },
                 animation: {
                     'fade': 'fadeOut 1s ease-in-out'
                 },

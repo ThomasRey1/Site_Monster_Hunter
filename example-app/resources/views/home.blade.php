@@ -25,35 +25,36 @@
         <input id="rightBtn" type="button" value="Right">
     </div>
 </div>-->
+<div class="bg-[#E5D4BA] dark:bg-[#1C1C1C] w-[75%] mt-[500px]">
+  <div class="max-w-[75%] relative m-auto mt-[50px]">
+    <div class="mySlides hidden animate-fade duration-[1.5s]">
+      <img src="{{ asset('image/img1.png') }}" class="w-[100%]">
+      <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Caption Text</div>
+    </div>
 
-<div class="max-w-[1000px] relative m-auto mt-[50px]">
-<div class="mySlides hidden animate-fade duration-[1.5s]">
-    <img src="{{ asset('image/img_chania.jpg') }}" style="width:100%">
-    <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Caption Text</div>
-  </div>
+    <div class="mySlides hidden animate-fade duration-[1.5s]">
+      <img src="{{ asset('image/img2.png') }}" class="w-[100%]">
+      <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Caption Two</div>
+    </div>
 
-  <div class="mySlides hidden animate-fade duration-[1.5s]">
-    <img src="{{ asset('image/img_chania2.jpg') }}" style="width:100%">
-    <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Caption Two</div>
+    <div class="mySlides hidden animate-fade duration-[1.5s]">
+      <img src="{{ asset('image/img3.png') }}" class="w-[100%]">
+      <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Caption Three</div>
+    </div>
+    <div class="mySlides hidden animate-fade duration-[1.5s]">
+      <img src="{{ asset('image/img4.png') }}" class="w-[100%]">
+      <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Caption four</div>
+    </div>
+    <!-- Next and previous buttons -->
+    <a class="absolute top-[50%] w-auto mt-[22px] p-[16px] text-white font-bold text-[18px] transition-[0.6s] select-none cursor-pointer rounded-r-[3px] hover:bg-[#000000cc]" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="absolute top-[50%] w-auto mt-[22px] p-[16px] text-white font-bold text-[18px] transition-[0.6s] select-none cursor-pointer right-0 rounded-l-[3px] hover:bg-[#000000cc]" onclick="plusSlides(1)">&#10095;</a>
   </div>
-
-  <div class="mySlides hidden animate-fade duration-[1.5s]">
-    <img src="{{ asset('image/img_flower.jpg') }}" style="width:100%">
-    <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Caption Three</div>
+  <div class="text-center">
+    <span class="dot w-[15px] h-[15px] m-x-[2px] border-2 bg-transparent inline-block border-[#717171] rounded-[50%] cursor-pointer transition-colors duration-[0.6s] hover:bg-[#717171]" onclick="currentSlide(1)"></span>
+    <span class="dot w-[15px] h-[15px] m-x-[2px] border-2 bg-transparent inline-block border-[#717171] rounded-[50%] cursor-pointer transition-colors duration-[0.6s] hover:bg-[#717171]" onclick="currentSlide(2)"></span>
+    <span class="dot w-[15px] h-[15px] m-x-[2px] border-2 bg-transparent inline-block border-[#717171] rounded-[50%] cursor-pointer transition-colors duration-[0.6s] hover:bg-[#717171]" onclick="currentSlide(3)"></span>
+    <span class="dot w-[15px] h-[15px] m-x-[2px] border-2 bg-transparent inline-block border-[#717171] rounded-[50%] cursor-pointer transition-colors duration-[0.6s] hover:bg-[#717171]" onclick="currentSlide(4)"></span>
   </div>
-  <div class="mySlides hidden animate-fade duration-[1.5s]">
-    <img src="{{ asset('image/img_flower2.jpg') }}" style="width:100%">
-    <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Caption four</div>
-  </div>
-  <!-- Next and previous buttons -->
-  <a class="absolute top-[50%] w-auto mt-[22px] p-[16px] text-white font-bold text-[18px] transition-[0.6s] select-none cursor-pointer rounded-r-[3px] hover:bg-[#000000cc]" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="absolute top-[50%] w-auto mt-[22px] p-[16px] text-white font-bold text-[18px] transition-[0.6s] select-none cursor-pointer right-0 rounded-l-[3px] hover:bg-[#000000cc]" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-  <span class="dot" onclick="currentSlide(4)"></span>
 </div>
 <script src="{{ asset('js/carousel.js') }}"></script>
 @stop
