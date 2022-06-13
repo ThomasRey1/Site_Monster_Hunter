@@ -2,31 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
-use app\Models\user;
 
-class userController extends Controller
+class UserController extends Controller
 {
-    public function addUser(){
-        request()->validate(
-            [
-                'name' => ['required'],
-                'password' => ['required', 'confirmed', 'min:8'],
-                'password_confirmed' => ['required']
-            ],
-            [
-                'password.confirmed' => 'Mot de passe non correcte.'
-            ]
-        );
-
-        $newUser = new user;
-        $newUser->useNickname = request('name');
-        $newUser->usePasswordHash = bcrypt(request('password'));
-        $newUser->save();
-        return redirect('/home');
+    public function show()
+    {
+        return view('inscription');
     }
 
-    public function connectUser(){
-        
+    public function store(Request $request)
+    {
+        User::create([
+            'nickname' => $request->nickname,
+            'password' => $request->password
+        ]);
+        return view('home');
     }
 }

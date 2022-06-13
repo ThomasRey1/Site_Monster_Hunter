@@ -1,5 +1,5 @@
-@extends('include.template')
-@section('mainContent')
+@extends('layouts.app')
+@section('content')
 <!-- slider container 
 <div class="duration-[0.5s] content-center">
     <div class="flex">
@@ -28,22 +28,38 @@
 <div class="bg-[#E5D4BA] dark:bg-[#1C1C1C] w-[75%] mt-[500px]">
   <div class="max-w-[75%] relative m-auto mt-[50px]">
     <div class="mySlides hidden animate-fade duration-[1.5s]">
-      <img src="{{ asset('image/img1.png') }}" class="w-[100%]">
-      <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Caption Text</div>
+      <a href="{{ route('allMonsters') }}">
+        <img src="{{ asset('image/img1.png') }}" class="w-[100%]">
+        <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Monstre</div>
+      </a>
     </div>
 
     <div class="mySlides hidden animate-fade duration-[1.5s]">
-      <img src="{{ asset('image/img2.png') }}" class="w-[100%]">
-      <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Caption Two</div>
+      <a href="{{ route('home') }}">
+        <img src="{{ asset('image/img2.png') }}" class="w-[100%]">
+        <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Arme</div>
+      </a>
     </div>
 
     <div class="mySlides hidden animate-fade duration-[1.5s]">
-      <img src="{{ asset('image/img3.png') }}" class="w-[100%]">
-      <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Caption Three</div>
+      <a href="{{ route('home') }}">
+        <img src="{{ asset('image/img3.png') }}" class="w-[100%]">
+        <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Armure</div>
+      </a>
     </div>
+
     <div class="mySlides hidden animate-fade duration-[1.5s]">
-      <img src="{{ asset('image/img4.png') }}" class="w-[100%]">
-      <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Caption four</div>
+      <a href="{{ route('home') }}">
+        <img src="{{ asset('image/img4.png') }}" class="w-[100%]">
+        <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Faune</div>
+      </a>
+    </div>
+
+    <div class="mySlides hidden animate-fade duration-[1.5s]">
+      <a href="{{ route('home') }}">
+        <img src="{{ asset('image/img4.png') }}" class="w-[100%]">
+        <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Carte</div>
+      </a>
     </div>
     <!-- Next and previous buttons -->
     <a class="absolute top-[50%] w-auto mt-[22px] p-[16px] text-white font-bold text-[18px] transition-[0.6s] select-none cursor-pointer rounded-r-[3px] hover:bg-[#000000cc]" onclick="plusSlides(-1)">&#10094;</a>
@@ -54,7 +70,8 @@
     <span class="dot w-[15px] h-[15px] m-x-[2px] border-2 bg-transparent inline-block border-[#717171] rounded-[50%] cursor-pointer transition-colors duration-[0.6s] hover:bg-[#717171]" onclick="currentSlide(2)"></span>
     <span class="dot w-[15px] h-[15px] m-x-[2px] border-2 bg-transparent inline-block border-[#717171] rounded-[50%] cursor-pointer transition-colors duration-[0.6s] hover:bg-[#717171]" onclick="currentSlide(3)"></span>
     <span class="dot w-[15px] h-[15px] m-x-[2px] border-2 bg-transparent inline-block border-[#717171] rounded-[50%] cursor-pointer transition-colors duration-[0.6s] hover:bg-[#717171]" onclick="currentSlide(4)"></span>
+    <span class="dot w-[15px] h-[15px] m-x-[2px] border-2 bg-transparent inline-block border-[#717171] rounded-[50%] cursor-pointer transition-colors duration-[0.6s] hover:bg-[#717171]" onclick="currentSlide(5)"></span>
   </div>
 </div>
 <script src="{{ asset('js/carousel.js') }}"></script>
-@stop
+@endsection

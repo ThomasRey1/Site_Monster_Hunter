@@ -15,11 +15,12 @@
     <header>
         @include('include.header')
     </header>
-    <main class="grid place-items-center">
-        @yield('mainContent')
+    <main class="grid place-items-center ">
+        @yield('content')
     </main>
     <footer>
         @include('include.footer')
     </footer>
 </body>
+
 </html>

@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\MonsterController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\Test;
-use App\Http\Controllers\userController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,17 +17,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
+Route::get('/', function(){
     return view('home');
-})->name("home");
-
-Route::get('/', function () {
+});
+Route::get('/home', function(){
     return view('home');
-})->name("home");
-
-Route::get('/insctiption', function () {
-    return view('inscription');
-})->name("insctiption");
-
-
-Route::post('/adduser', [userController::class, 'addUser']);
+})->name('home');
+Route::get('home/monsters', [MonsterController::class, 'index'])->name('allMonsters');
+Route::get('home/create',[UserController::class, 'show'])->name('user.create');
+Route::post('home/create',[UserController::class, 'store'])->name('user.store');
+Route::get('home/monsters/{id}/', [MonsterController::class, 'show'])->whereNumber('id')->name('monster.show');
