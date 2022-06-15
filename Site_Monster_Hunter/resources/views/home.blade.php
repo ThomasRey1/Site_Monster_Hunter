@@ -24,10 +24,10 @@
         <input id="rightBtn" type="button" value="Right">
     </div>
 </div>-->
-    <div class="bg-[#E5D4BA] dark:bg-[#1C1C1C] w-[75%] mt-[500px]">
+    <div class="bg-[#E5D4BA] dark:bg-[#1C1C1C] w-[75%] mt-[500px] duration-[0.5s]">
         <div class="max-w-[75%] relative m-auto mt-[50px]">
             <div class="mySlides hidden animate-fade duration-[1.5s]">
-                <a href="{{ route('home') }}">
+                <a href="{{ route('allMonsters') }}">
                     <img src="{{ asset('image/img1.png') }}" class="w-[100%]">
                     <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Monstre</div>
                 </a>

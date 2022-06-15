@@ -32,7 +32,7 @@
     }
 </script>
 
-<nav x-data="{ open: false }" class="duration-[0.5s] dark:text-gray-400 dark:bg-[#1D2946] z-[12] text-[25.6px] w-full fixed bg-[#3F5A99] h-[50px] text-black align-middle text-center border-b-2 border-black">
+<nav x-data="{ open: false }" class="duration-[0.5s] dark:bg-[#1D2946] z-[12] text-[25.6px] w-full fixed bg-[#3F5A99] h-[50px] text-black align-middle text-center border-b-2 border-black">
     <!-- Primary Navigation Menu -->
     <div class="block absolute left-[20px] h-4 w-[300px] m-auto">
         <input class="block absolute h-[35px] w-[35px] top-[10px] z-[5] opacity-0 peer" type="checkbox">
@@ -40,8 +40,8 @@
         <div class="block h-[4px] w-[35px] absolute z-[2] top-[26.5px] rounded-[10px] bg-[#9E8D74] duration-[0.4s] peer-checked:scale-y-0 dark:bg-[#766343]"></div>
         <div class="block h-[4px] w-[35px] absolute z-[2] top-[36px] rounded-[10px] bg-[#9E8D74] origin-[0%_100%] duration-[0.4s] peer-checked:rotate-[-35deg] dark:bg-[#766343]"></div>
         <ul class="pt-[100px] bg-[#3F5A99] h-[100vh] w-[300px] right-[300px] translate-x-[-150%] ml-[0px] pl-[50px] duration-[0.5s] shadow-2xl peer-checked:translate-x-[-55px] dark:bg-[#1D2946]">
-            <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="">Accueil</a></li>
-            <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="">Monstre</a></li>
+            <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ url('/')}}">Accueil</a></li>
+            <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ route('allMonsters') }}">Monstre</a></li>
             <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="">Armures</a></li>
             <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="">Arme</a></li>
             <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="">Faune</a></li>
@@ -63,11 +63,8 @@
             @else
             <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]">Compte</a>
                 <ul>
-                    <li class="mb-[1rem] text-[0.8rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="">Se connecter</a></li>
-                    <li class="mb-[1rem] text-[0.8rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="">S'inscrire</a></li>
-                    @auth
-                    <li class="mb-[1rem] text-[0.8rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="../../../../../index.php?action=logOut">Se déconnecter</a></li>
-                    @endauth
+                    <li class="mb-[1rem] text-[0.8rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ route('login') }}">Se connecter</a></li>
+                    <li class="mb-[1rem] text-[0.8rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ route('register') }}">S'inscrire</a></li>
                 </ul>
             </li>
             @endauth
@@ -85,13 +82,13 @@
     <p class="mb-[1.5rem] text-[1.3rem] dark:text-[#FFF6E5] text-black font-medium duration-[0.3s] py-[10px]">Monster Hunter Rise</p>
     <!-- Settings Dropdown -->
     @if (Route::has('login'))
-    <div class="top-0 right-0 px-6 absolute">
+    <div class="hidden xl:flex xl:items-center xl:ml-6 top-0 right-0 px-6 absolute">
         @auth
-        <div class="hidden sm:flex sm:items-center sm:ml-6">
+        <div class="hidden sm:flex sm:items-center sm:ml-6 py-[10px]">
             <x-dropdown align="right" width="48">
                 <x-slot name="trigger">
-                    <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
-                        <div>{{ Auth::user()->name }}</div>
+                    <button class="flex items-center mb-[1.5rem] text-[1.3rem] dark:text-[#FFF6E5] text-black font-medium duration-[0.3s] mr-[15px]">
+                        <div >{{ Auth::user()->name }}</div>
 
                         <div class="ml-1">
                             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -105,20 +102,19 @@
                     <!-- Authentication -->
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-
-                        <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
+                        <x-dropdown-link :href="route('logout')"  onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                            {{ __('Log Out') }}
+                            {{ __('Déconnexion') }}
                         </x-dropdown-link>
                     </form>
                 </x-slot>
             </x-dropdown>
         </div>
         @else
-        <a href="{{ route('login') }}" class="mb-[1.5rem] text-[1.3rem] dark:text-[#FFF6E5] text-black font-medium duration-[0.3s] mr-[15px]">Log in</a>
+        <a href="{{ route('login') }}" class="mb-[1.5rem] text-[1.3rem] dark:text-[#FFF6E5] text-black font-medium duration-[0.3s] mr-[15px] py-[10px]">Se connecter</a>
 
         @if (Route::has('register'))
-        <a href="{{ route('register') }}" class="mb-[1.5rem] text-[1.3rem] dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]">Register</a>
+        <a href="{{ route('register') }}" class="mb-[1.5rem] text-[1.3rem] dark:text-[#FFF6E5] text-black font-medium duration-[0.3s] py-[10px]">S'inscrire</a>
         @endif
         @endauth
     </div>
