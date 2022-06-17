@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArmorController;
 use App\Http\Controllers\MonsterController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,7 +25,11 @@ Route::get('/home', function () {
 
 
 Route::get('/monsters', [MonsterController::class, 'index'])->name('allMonsters');
+Route::get('/armors', [ArmorController::class, 'index'])->name('allArmors');
 
-Route::get('/monsters/{id}/', [MonsterController::class, 'show'])->middleware(['auth'])->whereNumber('id')->name('monster.show');
+Route::middleware(['auth'])->group(function() {
+    Route::get('/monsters/{id}/', [MonsterController::class, 'show'])->whereNumber('id')->name('monster.show');
+    Route::get('/armors/{id}/', [ArmorController::class, 'show'])->whereNumber('id')->name('armor.show');
+});
 
 require __DIR__.'/auth.php';

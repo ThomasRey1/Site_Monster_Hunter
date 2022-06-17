@@ -2,7 +2,7 @@
     <div class="bg-[#E5D4BA] dark:bg-[#1C1C1C] w-[75%] mt-[50px] duration-[0.5s] grid place-items-center">
         <p class="text-center text-5xl mb-[50px] text-black dark:text-[#FFF6E5]">{{ $post->nameMonster }}</p>
         <div class="w-[100%] grid grid-cols-3 place-items-center">
-            <div id="description" class="categorie text-center text-3xl mb-[50px] text-black dark:text-[#FFF6E5] border-black dark:border-[#FFF6E5] cursor-pointer select-none"><span onclick="selectCategorie('description', app)">Description</span></div>
+            <div id="description" class="categorie text-center text-3xl mb-[50px] text-black dark:text-[#FFF6E5] border-black dark:border-[#FFF6E5] cursor-pointer select-none border-b-2"><span onclick="selectCategorie('description', app)">Description</span></div>
             <div id="weakness" class="categorie text-center text-3xl mb-[50px] text-black dark:text-[#FFF6E5] border-black dark:border-[#FFF6E5] cursor-pointer select-none"><span onclick="selectCategorie('weakness', app)">Faiblesse</span></div>
             <div id="materiel" class="categorie text-center text-3xl mb-[50px] text-black dark:text-[#FFF6E5] border-black dark:border-[#FFF6E5] cursor-pointer select-none"><span onclick="selectCategorie('materiel', app)">Matériaux</span></div>
         </div>
