@@ -5,16 +5,23 @@ namespace App\Http\Controllers;
 use App\Models\Armor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 class ArmorController extends Controller
 {
     public function index()
     {
-        $armors = DB::table('armors')->paginate(2);
-        return view('armors', [
-            'armors' => $armors
-        ]);
+        $armors = Armor::paginate(10);
+        if ($_GET["level"] == 'Expert') {
+            return view('armors', [
+                'armors' => $armors,
+                'level' =>  'Expert'
+            ]);
+        }else{
+            return view('armors', [
+                'armors' => $armors,
+                'level' =>  'Novice'
+            ]);
+        }
     }
     public function show($id)
     {

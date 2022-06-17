@@ -10,14 +10,14 @@ class MonsterController extends Controller
 {
     public function index()
     {
-        $posts = Monster::all();
+        $monsters = Monster::all();
         return view('monsters', [
-            'posts' => $posts
+            'posts' => $monsters
         ]);
     }
     public function show($id)
     {
-        $post = Monster::findOrFail($id);
+        $monster = Monster::findOrFail($id);
         // $posts= [
         //     1 => 'monstre 1',
         //     2 => 'monstre 2'
@@ -25,7 +25,7 @@ class MonsterController extends Controller
         // $post = $posts[$id] ?? abort(404);
         if (Auth::check()) {
             return view('monster', [
-                'post' => $post
+                'monster' => $monster
             ]);
         } else {
             abort('403');

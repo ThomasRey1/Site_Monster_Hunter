@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nameArmor');
             $table->string('levelArmor');
-            $table->longText('aspcetArmor');
+            $table->longText('aspectArmor');
             $table->string('defenseArmor');
             $table->string('fireArmor');
             $table->string('waterArmor');
