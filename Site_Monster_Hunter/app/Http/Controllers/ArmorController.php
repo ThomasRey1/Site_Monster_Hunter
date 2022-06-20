@@ -8,20 +8,14 @@ use Illuminate\Support\Facades\Auth;
 
 class ArmorController extends Controller
 {
-    public function index()
+    public function index($level)
     {
-        $armors = Armor::paginate(10);
-        if ($_GET["level"] == 'Expert') {
+        $armors = Armor::where('levelArmor',$level)->paginate(10);
+
             return view('armors', [
                 'armors' => $armors,
-                'level' =>  'Expert'
+                'level' =>  $level
             ]);
-        }else{
-            return view('armors', [
-                'armors' => $armors,
-                'level' =>  'Novice'
-            ]);
-        }
     }
     public function show($id)
     {

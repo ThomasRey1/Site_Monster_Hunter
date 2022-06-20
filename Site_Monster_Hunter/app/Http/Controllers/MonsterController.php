@@ -12,7 +12,7 @@ class MonsterController extends Controller
     {
         $monsters = Monster::all();
         return view('monsters', [
-            'posts' => $monsters
+            'monsters' => $monsters
         ]);
     }
     public function show($id)

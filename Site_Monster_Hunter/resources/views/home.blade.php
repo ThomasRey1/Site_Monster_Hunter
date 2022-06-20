@@ -34,14 +34,14 @@
             </div>
 
             <div class="mySlides hidden animate-fade duration-[1.5s]">
-                <a href="{{ route('allArmors') }}">
+                <a href="{{ route('allArmors', ['level' => 'Novice']) }}">
                     <img src="{{ asset('images/img2.png') }}" class="w-[100%]">
                     <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Arme</div>
                 </a>
             </div>
 
             <div class="mySlides hidden animate-fade duration-[1.5s]">
-                <a href="{{ route('allArmors') }}">
+                <a href="{{ route('allArmors', ['level' => 'Novice']) }}">
                     <img src="{{ asset('images/img3.png') }}" class="w-[100%]">
                     <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Armure</div>
                 </a>
@@ -65,12 +65,13 @@
             <a class="absolute top-[50%] w-auto mt-[22px] p-[16px] text-white font-bold text-[18px] transition-[0.6s] select-none cursor-pointer right-0 rounded-l-[3px] hover:bg-[#000000cc]" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <div class="text-center">
+            <span class="dot w-[15px] h-[15px] m-x-[2px] border-2 bg-transparent inline-block border-[#717171] rounded-[50%] cursor-pointer transition-colors duration-[0.6s] hover:bg-[#717171]" onclick="currentSlide(0)"></span>
             <span class="dot w-[15px] h-[15px] m-x-[2px] border-2 bg-transparent inline-block border-[#717171] rounded-[50%] cursor-pointer transition-colors duration-[0.6s] hover:bg-[#717171]" onclick="currentSlide(1)"></span>
             <span class="dot w-[15px] h-[15px] m-x-[2px] border-2 bg-transparent inline-block border-[#717171] rounded-[50%] cursor-pointer transition-colors duration-[0.6s] hover:bg-[#717171]" onclick="currentSlide(2)"></span>
             <span class="dot w-[15px] h-[15px] m-x-[2px] border-2 bg-transparent inline-block border-[#717171] rounded-[50%] cursor-pointer transition-colors duration-[0.6s] hover:bg-[#717171]" onclick="currentSlide(3)"></span>
             <span class="dot w-[15px] h-[15px] m-x-[2px] border-2 bg-transparent inline-block border-[#717171] rounded-[50%] cursor-pointer transition-colors duration-[0.6s] hover:bg-[#717171]" onclick="currentSlide(4)"></span>
-            <span class="dot w-[15px] h-[15px] m-x-[2px] border-2 bg-transparent inline-block border-[#717171] rounded-[50%] cursor-pointer transition-colors duration-[0.6s] hover:bg-[#717171]" onclick="currentSlide(5)"></span>
         </div>
     </div>
 </x-app-layout>
 <script src="{{ asset('js/carousel.js') }}"></script>
+<script>timeOut()</script>

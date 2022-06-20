@@ -25,7 +25,7 @@ Route::get('/home', function () {
 
 
 Route::get('/monsters', [MonsterController::class, 'index'])->name('allMonsters');
-Route::get('/armors', [ArmorController::class, 'index'])->name('allArmors');
+Route::get('/armors{level}', [ArmorController::class, 'index'])->whereAlpha('level')->name('allArmors');
 
 Route::middleware(['auth'])->group(function() {
     Route::get('/monsters/{id}/', [MonsterController::class, 'show'])->whereNumber('id')->name('monster.show');
