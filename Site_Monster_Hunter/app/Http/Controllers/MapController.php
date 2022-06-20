@@ -2,25 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Fauns;
+use App\Models\Map;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class FaunController extends Controller
+class MapController extends Controller
 {
     public function index()
     {
-        $fauns = Fauns::all();
-        return view('fauns', [
-            'fauns' => $fauns
+        $maps = Map::all();
+        return view('maps', [
+            'maps' => $maps
         ]);
     }
     public function show($id)
     {
-        $faun = Fauns::findOrFail($id);
+        $map = Map::findOrFail($id);
         if (Auth::check()) {
-            return view('faun', [
-                'faun' => $faun
+            return view('map', [
+                'map' => $map
             ]);
         } else {
             abort('403');

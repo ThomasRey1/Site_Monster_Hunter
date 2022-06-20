@@ -45,7 +45,7 @@
             <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ route('allArmors', ['level' => 'Novice']) }}">Armures</a></li>
             <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="">Arme</a></li>
             <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ route('allFauns') }}">Faune</a></li>
-            <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="">Carte</a></li>
+            <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ route('allMaps') }}">Carte</a></li>
             <hr class="border-gray-400">
             @auth
             <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]">{{ Auth::user()->name }}</a>
