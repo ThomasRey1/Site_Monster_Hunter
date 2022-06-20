@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArmorController;
+use App\Http\Controllers\FaunController;
 use App\Http\Controllers\MonsterController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,10 +26,12 @@ Route::get('/home', function () {
 
 
 Route::get('/monsters', [MonsterController::class, 'index'])->name('allMonsters');
+Route::get('/fauns', [FaunController::class, 'index'])->name('allFauns');
 Route::get('/armors{level}', [ArmorController::class, 'index'])->whereAlpha('level')->name('allArmors');
 
 Route::middleware(['auth'])->group(function() {
     Route::get('/monsters/{id}/', [MonsterController::class, 'show'])->whereNumber('id')->name('monster.show');
+    Route::get('/fauns/{id}/', [FaunController::class, 'show'])->whereNumber('id')->name('faun.show');
     Route::get('/armors/{id}/', [ArmorController::class, 'show'])->whereNumber('id')->name('armor.show');
 });
 

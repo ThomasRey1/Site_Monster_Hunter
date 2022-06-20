@@ -27,6 +27,7 @@
             <main class="grid place-items-center">
                 {{ $slot }}
             </main>
+            @include('layouts.footer')
         </div>
     </body>
 </html>
