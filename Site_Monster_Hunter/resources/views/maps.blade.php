@@ -1,7 +1,6 @@
 <x-app-layout>
     <div class="bg-[#E5D4BA] dark:bg-[#1C1C1C] w-[75%] mt-[50px] duration-[0.5s]">
-        <p class="text-center text-6xl mb-[100px] text-black dark:text-[#FFF6E5]">Faune</p>
-        <!-- Small Monsters -->
+        <p class="text-center text-6xl mb-[100px] text-black dark:text-[#FFF6E5]">Map</p>
         <div class="grid grid-cols-3 place-items-center	mb-[35px]">
             @foreach ($maps as $map)
             <div class="text-center mb-[100px] text-xl">

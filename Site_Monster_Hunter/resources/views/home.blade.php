@@ -34,7 +34,7 @@
             </div>
 
             <div class="mySlides hidden animate-fade duration-[1.5s]">
-                <a href="">
+                <a href="{{ route('allWeapons') }}">
                     <img src="{{ asset('images/img2.png') }}" class="w-[100%]">
                     <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Arme</div>
                 </a>
