@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="bg-[#E5D4BA] dark:bg-[#1C1C1C] w-[75%] mt-[50px] duration-[0.5s] grid place-items-center dark:text-[#FFF6E5]">
         <p class="text-center text-5xl mb-[50px]">{{ $type->TypeWeapon }}</p>
-        <div class="w-[80%] h-[500px] mb-[50px] text-center">
+        <div class="w-[80%] min-h-[200px] mb-[50px] text-center">
             <span>{{ $type->descrWeapon }}</span>
         </div>
         <div class="w-[100%] grid grid-cols-2 place-items-center">

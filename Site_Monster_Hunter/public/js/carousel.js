@@ -76,7 +76,7 @@ rightBtn.addEventListener("click", function(){
     images.turnRight();
 });
 */
-const time = 3000;
+const time = 5000;
 let slideIndex = 0;
 showSlides(slideIndex);
 
