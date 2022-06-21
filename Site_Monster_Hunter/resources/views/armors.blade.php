@@ -15,7 +15,7 @@
             @foreach ($armors as $armor)
                 @if ($armor->levelArmor == $level)
                     <tr class="bg-[#9E8D74] dark:bg-[#766343] dark:text-black border-[1px] border-black">
-                        <td class="border-[1px] border-black">
+                        <td class="border-[1px] border-black w-[25%]">
                             <a href="{{ route('armor.show', ['id' => $armor->id]) }}" class="grid grid-cols-2">
                                 @foreach ($armor->armorDetails as $detail)
                                     @switch($detail->partArmor)
@@ -45,18 +45,13 @@
                                 @endforeach
                             </a>
                         </td>
-                        <td class="border-[1px] border-black">{{ $armor->nameArmor }}</td>
-                        <td class="border-[1px] border-black">{{ $armor->levelArmor }}</td>
-                        <td class="grid place-items-center"><img src="{{ asset('images/'.$armor->aspectArmor) }}" alt="{{ $armor->aspectArmor }}"></td>
+                        <td class="border-[1px] border-black w-[25%]">{{ $armor->nameArmor }}</td>
+                        <td class="border-[1px] border-black w-[20%]">{{ $armor->levelArmor }}</td>
+                        <td class="grid place-items-center"><img class="w-full" src="{{ asset('images/'.$armor->aspectArmor) }}" alt="{{ $armor->aspectArmor }}"></td>
                     </tr>
                 @endif
             @endforeach
         </table>
         <div class="mt-[10px]">{{ $armors->links() }}</div>
     </div>
-    
-    <script>
-        let app = <?= json_encode($armor) ?>;
-    </script>
-    <script src="{{ asset('js/armor.js') }}"></script>
 </x-app-layout>

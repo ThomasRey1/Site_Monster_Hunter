@@ -34,9 +34,9 @@ function show(post) {
         case "weakness":
             categorie = document.getElementById("weakness");
             categorie.className += " border-b-2";
-            img1.src =  "/images/" + post['imageElementMonster'];
+            img1.src =  "/images/monster/" + post['imageElementMonster'];
             img1.alt = post['imageElementMonster'];
-            img2.src = "/images/" + post['imageFleauMonster'];
+            img2.src = "/images/monster/" + post['imageFleauMonster'];
             img2.alt = post['imageFleauMonster'];
             title.innerText = "Détail";
             text.innerText = post['WeaknessMonster'];
@@ -47,9 +47,9 @@ function show(post) {
         case "materiel":
             categorie = document.getElementById("materiel");
             categorie.className += " border-b-2";
-            img1.src = "/images/" + post['imageNoviceMonster'];
+            img1.src = "/images/monster/" + post['imageNoviceMonster'];
             img1.alt = post['imageNoviceMonster'];
-            img2.src = "/images/" + post['imageExpertMonster'];
+            img2.src = "/images/monster/" + post['imageExpertMonster'];
             img2.alt = post['imageExpertMonster'];
             title.innerText = "Expert";
             text.innerText = "";

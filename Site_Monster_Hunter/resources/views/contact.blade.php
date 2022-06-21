@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-auth-card>
-        <p class="text-center text-6xl mb-[100px] text-black dark:text-[#FFF6E5]">Connexion</p>
+        <p class="text-center text-6xl mb-[100px] text-black dark:text-[#FFF6E5]">Contacte</p>
 
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />

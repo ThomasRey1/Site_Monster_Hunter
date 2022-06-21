@@ -7,7 +7,7 @@
             <div id="materiel" class="categorie text-center text-3xl mb-[50px] border-black dark:border-[#FFF6E5] cursor-pointer select-none"><span onclick="selectCategorie('materiel', app)">Matériaux</span></div>
         </div>
         <div class="w-[80%] h-[500px] mb-[50px]">
-            <img src="{{ $monster->imageMonster }}" alt="{{ $monster->imageMonster }}" id="img1">
+            <img src="{{ $monster->imageMonster }}" alt="{{ $monster->imageMonster }}" id="img1" class="min-h-[50px]">
         </div>
         <div id="part2" class="w-[100%] grid grid-cols-2 place-items-center">
             <div class="w-full">

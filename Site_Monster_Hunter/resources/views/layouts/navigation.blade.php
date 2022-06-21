@@ -40,7 +40,7 @@
         <div class="block h-[4px] w-[35px] absolute z-[2] top-[26.5px] rounded-[10px] bg-[#9E8D74] duration-[0.4s] peer-checked:scale-y-0 dark:bg-[#766343]"></div>
         <div class="block h-[4px] w-[35px] absolute z-[2] top-[36px] rounded-[10px] bg-[#9E8D74] origin-[0%_100%] duration-[0.4s] peer-checked:rotate-[-35deg] dark:bg-[#766343]"></div>
         <ul class="pt-[100px] bg-[#3F5A99] h-[100vh] w-[300px] right-[300px] translate-x-[-150%] ml-[0px] pl-[50px] duration-[0.5s] shadow-2xl peer-checked:translate-x-[-55px] dark:bg-[#1D2946]">
-            <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ url('/home')}}">Accueil</a></li>
+            <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ url('/')}}">Accueil</a></li>
             <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ route('allMonsters') }}">Monstre</a></li>
             <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ route('allWeapons') }}">Arme</a></li>
             <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ route('allArmors', ['level' => 'Novice']) }}">Armures</a></li>
