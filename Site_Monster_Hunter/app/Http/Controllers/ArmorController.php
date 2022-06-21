@@ -25,11 +25,6 @@ class ArmorController extends Controller
     public function show($id)
     {
         $armor = Armor::findOrFail($id);
-        // $posts= [
-        //     1 => 'monstre 1',
-        //     2 => 'monstre 2'
-        // ];
-        // $post = $posts[$id] ?? abort(404);
         if (Auth::check()) {
             return view('armor', [
                 'armor' => $armor
