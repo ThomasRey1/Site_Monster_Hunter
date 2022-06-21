@@ -1,15 +1,15 @@
 <x-app-layout>
-    <div class="bg-[#E5D4BA] dark:bg-[#1C1C1C] w-[75%] mt-[50px] duration-[0.5s] grid place-items-center">
-        <p class="text-center text-5xl mb-[50px] text-black dark:text-[#FFF6E5]">Détail {{ $type->TypeWeapon }}</p>
+    <div class="bg-[#E5D4BA] dark:bg-[#1C1C1C] w-[75%] mt-[50px] duration-[0.5s] grid place-items-center text-black dark:text-[#FFF6E5]">
+        <p class="text-center text-5xl mb-[50px]">Détail {{ $type->TypeWeapon }}</p>
         <img src="{{ asset('images/'.$weapon->imageWeapon) }}" alt="{{ $weapon->imageWeapon }}" class="mb-[100px] min-h-[200px]">
         <table class="w-[80%] text-center mb-[168px]">
-            <tr class="bg-[#52493C] border-2 border-black">
+            <tr class="bg-[#52493C] dark:bg-black border-2 border-black">
                 <th>Nom</th>
                 <th>État d'attaque</th>
                 <th>Matériel</th>
                 <th>Fabrication</th>
             </tr>
-            <tr class="bg-[#9E8D74] border-[1px] border-black">
+            <tr class="bg-[#9E8D74] dark:bg-[#766343] dark:text-black border-[1px] border-black">
                 <td class="border-[1px] border-black w-[20%]">
                     {{ $weapon->nameWeapon }}
                 </td>

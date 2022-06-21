@@ -28,35 +28,35 @@
         <div class="max-w-[75%] relative m-auto mt-[50px]">
             <div class="mySlides hidden animate-fade duration-[1.5s]">
                 <a href="{{ route('allMonsters') }}">
-                    <img src="{{ asset('images/img1.png') }}" class="w-[100%]">
+                    <img src="{{ asset('images/imgFont.png') }}" class="w-[100%]">
                     <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Monstre</div>
                 </a>
             </div>
 
             <div class="mySlides hidden animate-fade duration-[1.5s]">
                 <a href="{{ route('allWeapons') }}">
-                    <img src="{{ asset('images/img2.png') }}" class="w-[100%]">
+                    <img src="{{ asset('images/weapon.png') }}" class="w-[100%]">
                     <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Arme</div>
                 </a>
             </div>
 
             <div class="mySlides hidden animate-fade duration-[1.5s]">
                 <a href="{{ route('allArmors', ['level' => 'Novice']) }}">
-                    <img src="{{ asset('images/img3.png') }}" class="w-[100%]">
+                    <img src="{{ asset('images/armor.png') }}" class="w-[100%]">
                     <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Armure</div>
                 </a>
             </div>
 
             <div class="mySlides hidden animate-fade duration-[1.5s]">
                 <a href="{{ route('allFauns') }}">
-                    <img src="{{ asset('images/img4.png') }}" class="w-[100%]">
+                    <img src="{{ asset('images/faun.png') }}" class="w-[100%]">
                     <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Faune</div>
                 </a>
             </div>
 
             <div class="mySlides hidden animate-fade duration-[1.5s]">
                 <a href="{{ route('allMaps') }}">
-                    <img src="{{ asset('images/img4.png') }}" class="w-[100%]">
+                    <img src="{{ asset('images/map.png') }}" class="w-[100%]">
                     <div class="absolute text-[#f2f2f2] text-[15px] py-[8px] px-[12px] bottom-[8px] w-[100%] text-center">Carte</div>
                 </a>
             </div>

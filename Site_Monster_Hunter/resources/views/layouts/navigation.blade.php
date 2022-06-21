@@ -40,10 +40,10 @@
         <div class="block h-[4px] w-[35px] absolute z-[2] top-[26.5px] rounded-[10px] bg-[#9E8D74] duration-[0.4s] peer-checked:scale-y-0 dark:bg-[#766343]"></div>
         <div class="block h-[4px] w-[35px] absolute z-[2] top-[36px] rounded-[10px] bg-[#9E8D74] origin-[0%_100%] duration-[0.4s] peer-checked:rotate-[-35deg] dark:bg-[#766343]"></div>
         <ul class="pt-[100px] bg-[#3F5A99] h-[100vh] w-[300px] right-[300px] translate-x-[-150%] ml-[0px] pl-[50px] duration-[0.5s] shadow-2xl peer-checked:translate-x-[-55px] dark:bg-[#1D2946]">
-            <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ url('/')}}">Accueil</a></li>
+            <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ url('/home')}}">Accueil</a></li>
             <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ route('allMonsters') }}">Monstre</a></li>
+            <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ route('allWeapons') }}">Arme</a></li>
             <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ route('allArmors', ['level' => 'Novice']) }}">Armures</a></li>
-            <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="">Arme</a></li>
             <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ route('allFauns') }}">Faune</a></li>
             <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ route('allMaps') }}">Carte</a></li>
             <hr class="border-gray-400">
@@ -68,7 +68,7 @@
                 </ul>
             </li>
             @endauth
-            <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="">Contacte</a></li>
+            <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ route('contacte') }}">Contacte</a></li>
         </ul>
     </div>
     <button id="theme-toggle" type="button" class="absolute left-[15%] top-[4px] text-[#9E8D74] dark:text-[#766343] hover:bg-[#354B80] dark:hover:bg-[#27375E] focus:outline-none focus:ring-4 focus:ring-[#354B80] dark:focus:ring-[#27375E] rounded-lg text-sm p-2.5">

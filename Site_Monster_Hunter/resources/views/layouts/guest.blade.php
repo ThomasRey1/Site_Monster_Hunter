@@ -17,7 +17,7 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-    <body>
+    <body class="bg-[url('/images/imgFont.png')] bg-fixed bg-cover">
         
     @include('layouts.navigation')
         <div class="grid place-items-center">

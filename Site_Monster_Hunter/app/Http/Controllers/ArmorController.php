@@ -10,12 +10,17 @@ class ArmorController extends Controller
 {
     public function index($level)
     {
-        $armors = Armor::where('levelArmor',$level)->paginate(5);
-
-            return view('armors', [
-                'armors' => $armors,
-                'level' =>  $level
-            ]);
+        if ($level == "Novice" || $level == "Expert") {
+            $armors = Armor::where('levelArmor',$level)->paginate(5);
+    
+                return view('armors', [
+                    'armors' => $armors,
+                    'level' =>  $level
+                ]);
+        }
+        else{
+            abort('404');
+        }
     }
     public function show($id)
     {

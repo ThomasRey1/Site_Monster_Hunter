@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArmorController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FaunController;
 use App\Http\Controllers\MapController;
 use App\Http\Controllers\MonsterController;
@@ -30,8 +31,10 @@ Route::get('/home', function () {
 Route::get('/monsters', [MonsterController::class, 'index'])->name('allMonsters');
 Route::get('/fauns', [FaunController::class, 'index'])->name('allFauns');
 Route::get('/weapons', [WeaponController::class, 'index'])->name('allWeapons');
-Route::get('/Maps', [MapController::class, 'index'])->name('allMaps');
+Route::get('/maps', [MapController::class, 'index'])->name('allMaps');
 Route::get('/armors{level}', [ArmorController::class, 'index'])->whereAlpha('level')->name('allArmors');
+Route::get('/contact', [ContactController::class, 'index'])->name('contacte');
+Route::Post('/home', [ContactController::class, 'show'])->name('contacte.show');
 
 Route::middleware(['auth'])->group(function() {
     Route::get('/monsters/{id}/', [MonsterController::class, 'show'])->whereNumber('id')->name('monster.show');

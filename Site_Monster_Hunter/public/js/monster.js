@@ -21,8 +21,10 @@ function show(post) {
         case "description":
             categorie = document.getElementById("description");
             categorie.className += " border-b-2";
-            img1.innerText = post['imageMonster'];
-            img2.innerText = post['imageTwoMonster'];
+            img1.src = "/images/" + post['imageMonster'];
+            img1.alt = post['imageMonster'];
+            img2.src = "/images/" + post['imageTwoMonster'];
+            img2.alt = post['imageTwoMonster'];
             title.innerText = "Détail";
             text.innerText = post['descrMonster'];
             part2.className = part2.className.replace("grid-cols-1", "grid-cols-2");
@@ -32,8 +34,10 @@ function show(post) {
         case "weakness":
             categorie = document.getElementById("weakness");
             categorie.className += " border-b-2";
-            img1.innerText = post['imageElementMonster'];
-            img2.innerText = post['imageFleauMonster'];
+            img1.src =  "/images/" + post['imageElementMonster'];
+            img1.alt = post['imageElementMonster'];
+            img2.src = "/images/" + post['imageFleauMonster'];
+            img2.alt = post['imageFleauMonster'];
             title.innerText = "Détail";
             text.innerText = post['WeaknessMonster'];
             part2.className = part2.className.replace("grid-cols-1", "grid-cols-2");
@@ -43,8 +47,10 @@ function show(post) {
         case "materiel":
             categorie = document.getElementById("materiel");
             categorie.className += " border-b-2";
-            img1.innerText = post['imageNoviceMonster'];
-            img2.innerText = post['imageExpertMonster'];
+            img1.src = "/images/" + post['imageNoviceMonster'];
+            img1.alt = post['imageNoviceMonster'];
+            img2.src = "/images/" + post['imageExpertMonster'];
+            img2.alt = post['imageExpertMonster'];
             title.innerText = "Expert";
             text.innerText = "";
             part2.className = part2.className.replace("grid-cols-2", "grid-cols-1");

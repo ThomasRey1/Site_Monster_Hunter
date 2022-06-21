@@ -1,16 +1,16 @@
 <x-app-layout>
-    <div class="bg-[#E5D4BA] dark:bg-[#1C1C1C] w-[75%] mt-[50px] duration-[0.5s] grid place-items-center">
-        <p class="text-center text-5xl mb-[50px] text-black dark:text-[#FFF6E5]">Détail {{ $armor->nameArmor }}</p>
+    <div class="bg-[#E5D4BA] dark:bg-[#1C1C1C] w-[75%] mt-[50px] duration-[0.5s] grid place-items-center text-black dark:text-[#FFF6E5]">
+        <p class="text-center text-5xl mb-[50px]">Détail {{ $armor->nameArmor }}</p>
         <img src="{{ asset('images/'.$armor->aspectArmor) }}" alt="{{ $armor->aspectArmor }}" class="mb-[50px]">
         <table class="w-[80%] text-center">
-            <tr class="bg-[#52493C] border-2 border-black">
+            <tr class="bg-[#52493C] dark:bg-black border-2 border-black">
                 <th>Partie</th>
                 <th>Résistance</th>
                 <th>Matériel</th>
                 <th>Talent</th>
             </tr>
             @foreach ($armor->armorDetails as $detail)
-            <tr class="bg-[#9E8D74] border-[1px] border-black">
+            <tr class="bg-[#9E8D74] dark:bg-[#766343] dark:text-black border-[1px] border-black">
                 <td class="border-[1px] border-black">
                     @switch($detail->partArmor)
                         @case('Heaume')
