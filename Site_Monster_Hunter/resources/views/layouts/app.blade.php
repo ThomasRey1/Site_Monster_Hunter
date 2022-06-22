@@ -18,7 +18,7 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="antialiased bg-[url('/images/imgFont.png')] bg-fixed bg-cover">
-        <div class="min-h-screen">
+        <div class="">
             @include('layouts.navigation')
 
             

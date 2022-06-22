@@ -68,7 +68,7 @@
                 </ul>
             </li>
             @endauth
-            <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ route('contacte') }}">Contacte</a></li>
+            <li class="mb-[1.5rem] text-[1.3rem]"><a class="dark:text-[#FFF6E5] text-black font-medium duration-[0.3s]" href="{{ route('contacte') }}">Contact</a></li>
         </ul>
     </div>
     <button id="theme-toggle" type="button" class="absolute left-[15%] top-[4px] text-[#9E8D74] dark:text-[#766343] hover:bg-[#354B80] dark:hover:bg-[#27375E] focus:outline-none focus:ring-4 focus:ring-[#354B80] dark:focus:ring-[#27375E] rounded-lg text-sm p-2.5">

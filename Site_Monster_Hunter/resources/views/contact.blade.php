@@ -25,7 +25,9 @@
                 <x-input id="subject" class="block mt-1 w-full" :placeholder="__('Sujet')" type="text" name="subject" required autocomplete="current-password" />
             </div>
 
-
+            <div class="mt-4 grid">
+                <textarea name="message" id="message" rows="10"></textarea>
+            </div>
 
             <div class="flex items-center justify-end mt-4">
                 <x-button class="w-[100%] ml-3">
